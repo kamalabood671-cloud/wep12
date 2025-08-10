@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هول إن ون - مستلزمات الجولف الفاخرة</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #006b77;
+            --secondary-color: #02535e;
+            --accent-color: #00eeff;
+            --dark-bg: #1a1a1a;
+            --dark-text: #e0e0e0;
+            --dark-card-bg: #2c2c2c;
+            --dark-section-bg: #252525;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(to bottom, #91dde7 0%, #006b79 100%);
+            background-attachment: fixed;
+            line-height: 1.8;
+            padding-top: 80px;
+            transition: all 0.1s ease;
+            color: #000000;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+            color: var(--dark-text);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .logo {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0, 238, 255, 0.2);
+        }
+
+        .logo:hover {
+            transform: rotate(360deg);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            transition: all 0.4s ease;
+        }
+
+        .dark-mode .navbar {
+            background-color: rgba(40, 40, 40, 0.95) !important;
+            color: var(--dark-text);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .row.g-4 {
+            margin: 0 -10px;
+        }
+
+        .row.g-4 > [class^="col-"] {
+            padding: 0 10px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            height: 100%;
+            border: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgb(5, 95, 88);
+            border-radius: 15px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .dark-mode .card {
+            background: var(--dark-card-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            color: var(--dark-text);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgb(0, 217, 255);
+        }
+
+        .dark-mode .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 238, 255, 0.5);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .dark-mode .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .dark-mode .btn-primary:hover {
+            background-color: #00ccdd;
+        }
+
+        section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: #a3dfe7;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 247, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .dark-mode section {
+            background: var(--dark-section-bg);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: #000;
+            padding: 4rem 0;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .dark-mode footer {
+            background: #111;
+            color: var(--dark-text);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        footer .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer a {
+            color: rgba(0, 0, 0, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .dark-mode .footer a {
+            color: var(--dark-text);
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-link {
+            position: relative;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+
+        .dark-mode .nav-link {
+            color: var(--dark-text);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .carousel-item {
+            height: 70vh;
+            min-height: 400px;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+            transition: filter 0.4s ease;
+        }
+
+        .dark-mode .carousel-item img {
+            filter: brightness(0.6);
+        }
+
+        .accordion-button {
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .accordion-button {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--dark-text);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .dark-mode .accordion-button:not(.collapsed) {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+
+        .whatsapp-float img {
+            transition: transform 0.3s;
+            width: 60px;
+        }
+
+        .whatsapp-float img:hover {
+            transform: scale(1.1);
+        }
+
+        #cart-section {
+            background-color: #a3dfe7;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .dark-mode #cart-section {
+            background-color: var(--dark-section-bg);
+        }
+
+        #cart-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        #cart-section th,
+        #cart-section td {
+            padding: 10px;
+            text-align: right;
+            border-bottom: 1px solid #000000;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode #cart-section th,
+        .dark-mode #cart-section td {
+            border-bottom: 1px solid #444;
+        }
+
+        #cart-section th {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .dark-mode #cart-section th {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        #cart-section .btn-remove {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode #cart-section .btn-remove {
+            background-color: #ff4d4d;
+        }
+
+        #cart-section .btn-remove:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+
+        #cart-section .total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .dark-mode .form-control,
+        .dark-mode .form-select {
+            background-color: #333;
+            color: var(--dark-text);
+            border-color: #444;
+        }
+
+        .dark-mode .form-control:focus,
+        .dark-mode .form-select:focus {
+            background-color: #333;
+            color: var(--dark-text);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px rgba(0, 238, 255, 0.5);
+        }
+
+        .footer-dark-mode-toggle {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .dark-mode .footer-dark-mode-toggle {
+            background: var(--accent-color);
+            color: #000;
+        }
+
+        .footer-dark-mode-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode .footer-dark-mode-toggle:hover {
+            box-shadow: 0 4px 8px rgba(0, 238, 255, 0.3);
+        }
+
+        .dark-mode {
+            --primary-color: #00a8b5;
+            --secondary-color: #008c99;
+        }
+
+        .dark-mode img:not(.logo, .whatsapp-float img) {
+            opacity: 0.9;
+        }
+
+        .dark-mode .card-img-top {
+            filter: brightness(0.85);
+        }
+
+        .dark-mode .card:hover .card-img-top {
+            filter: brightness(1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card, section, footer {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .dark-mode .navbar.scrolled {
+            background-color: rgba(40, 40, 40, 0.98) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .row.g-4 {
+                margin: 0 -5px;
+            }
+
+            .row.g-4 > [class^="col-"] {
+                padding: 0 5px;
+            }
+
+            .card {
+                margin-bottom: 10px;
+            }
+
+            .carousel-item {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item {
+                height: 40vh;
+            }
+
+            .card-img-top {
+                height: 180px;
+            }
+
+            body {
+                padding-top: 70px;
+            }
+            
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Audio player with controls -->
+    <audio controls loop style="display: none;">
+        <source src="MP3calm.mp3" type="audio/mpeg">
+        متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/d27331d1-a0dd-4f7f-afba-de938fcf03fe/image.jpg" alt="شعار هول إن ون" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#store">المتجر</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cart">السلة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apartments">الشقق</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#golf_courses">ملاعب الجولف</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#restaurants">المطاعم والمقاهي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">الحجز</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp floating button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/962781452714" target="_blank" aria-label="تواصل عبر واتساب">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+        </a>
+    </div>
+
+    <!-- Home section -->
+    <section id="home" class="text-center">
+        <div class="container">
+            <h1 class="display-4">مرحبًا بك في هول إن ون</h1>
+            <p class="lead">وجهتك الفاخرة لعالم الجولف والاستجمام</p>
+            <a href="#booking" class="btn btn-primary btn-lg mt-3">احجز الآن</a>
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators1" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src=https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/460fa390-74e4-4378-bdc5-d99fd07b0bd1/image.jpg alt="صورة ملعب جولف" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/f8c0d4db-51e1-45fc-b947-180659e7e185/image.jpg" alt="صورة معدات جولف" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/30b83c8c-5e04-4b37-9c66-a290bb26eef4/image.jpg" alt="صورة منتجع" class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">السابق</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">التالي</span>
+        </button>
+    </div>
+
+    <!-- Events accordion -->
+    <div class="accordion mt-4" id="eventsAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    الأحداث المهمة
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#eventsAccordion">
+                <div class="accordion-body">
+                    فعاليات ومهرجانات متنوعة تشمل بطولات الجولف والفعاليات الاجتماعية.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    المحاضرات
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#eventsAccordion">
+                <div class="accordion-body">
+                    محاضرات تعليمية عن الجولف، التسويق، الإدارة، والضيافة مع خبراء في المجال.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Store section -->
+    <section id="store">
+        <h2 class="mb-4">المتجر</h2>
+        <div class="row g-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/36079e3f-581f-4cb3-af5d-8d95ea717f33/image.jpg">
+                        <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/36079e3f-581f-4cb3-af5d-8d95ea717f33/image.jpg" alt="طابة جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">طابة جولف</h5>
+                        <p class="card-text">طابة جولف عالية الجودة مصممة للأداء الممتاز.</p>
+                        <p class="card-text"><strong>السعر: 1 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="طابة جولف" data-price="1">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/a78eedaf-2e8d-40eb-ba53-75ce57a9994c/image.jpg">
+                        <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/a78eedaf-2e8d-40eb-ba53-75ce57a9994c/image.jpg" alt="مضرب جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">مضرب جولف</h5>
+                        <p class="card-text">مضرب جولف احترافي لتحسين أدائك.</p>
+                        <p class="card-text"><strong>السعر: 20 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="مضرب جولف" data-price="20">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/36731400-a0de-44a7-84f2-a729814cfda0/image.jpg">
+                        <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/36731400-a0de-44a7-84f2-a729814cfda0/image.jpg" alt="شنتة جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">شنتة جولف</h5>
+                        <p class="card-text">شنتة جولف أنيقة وعملية لتخزين معداتك.</p>
+                        <p class="card-text"><strong>السعر: 30 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="شنتة جولف" data-price="30">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/4c73fbb6-84fc-4bfb-a5dd-4f5423108c9f/image.jpg">
+                        <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/4c73fbb6-84fc-4bfb-a5dd-4f5423108c9f/image.jpg" alt="قفازات جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">قفازات جولف</h5>
+                        <p class="card-text">قفازات مريحة لقبضة أفضل أثناء اللعب.</p>
+                        <p class="card-text"><strong>السعر: 15 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="قفازات جولف" data-price="15">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://th.bing.com/th/id/OIP.Xvp6RyBt_EDWzv6GlHvVnQHaHa?w=192&h=192&c=7&r=0&o=7&pid=1.7&rm=3">
+                        <img src="https://th.bing.com/th/id/OIP.Xvp6RyBt_EDWzv6GlHvVnQHaHa?w=192&h=192&c=7&r=0&o=7&pid=1.7&rm=3" alt="أحذية جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">أحذية جولف</h5>
+                        <p class="card-text">أحذية جولف مريحة وأنيقة.</p>
+                        <p class="card-text"><strong>السعر: 50 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="أحذية جولف" data-price="50">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP._bn5FKnaHbvZ7kY6FL_nIQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP._bn5FKnaHbvZ7kY6FL_nIQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="قبعة جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">قبعة جولف</h5>
+                        <p class="card-text">قبعة أنيقة لحماية من الشمس أثناء اللعب.</p>
+                        <p class="card-text"><strong>السعر: 10 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="قبعة جولف" data-price="10">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://th.bing.com/th/id/OIP.GhG_tXg6IQNIpmmRcfQ8FgHaHa?w=200&h=200&c=7&r=0&o=7&pid=1.7&rm=3">
+                        <img src="https://th.bing.com/th/id/OIP.GhG_tXg6IQNIpmmRcfQ8FgHaHa?w=200&h=200&c=7&r=0&o=7&pid=1.7&rm=3" alt="منشفة جولف" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">منشفة جولف</h5>
+                        <p class="card-text">منشفة عالية الامتصاص للجولف.</p>
+                        <p class="card-text"><strong>السعر: 8 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="منشفة جولف" data-price="8">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card">
+                    <a href="https://estawredly.com/wp-content/uploads/2021/05/HTB1iMYdOhTpK1RjSZR0q6zEwXXal.jpg?v=1622378041">
+                        <img src="https://estawredly.com/wp-content/uploads/2021/05/HTB1iMYdOhTpK1RjSZR0q6zEwXXal.jpg?v=1622378041" alt="حقيبة جولف فاخرة" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">حقيبة جولف فاخرة</h5>
+                        <p class="card-text">حقيبة جولف فاخرة بتصميم عصري.</p>
+                        <p class="card-text"><strong>السعر: 80 دينار</strong></p>
+                        <button class="btn btn-primary add-to-cart" data-name="حقيبة جولف فاخرة" data-price="80">إضافة إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart section -->
+    <section id="cart" class="container">
+        <h2 class="mb-4">سلة التسوق</h2>
+        <div id="cart-section">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>المنتج</th>
+                        <th>السعر</th>
+                        <th>إزالة</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+            <p class="total">الإجمالي: <span id="cart-total">0</span> دينار</p>
+            <button class="btn btn-primary mt-3" id="checkout-btn">إتمام الشراء</button>
+        </div>
+    </section>
+
+    <!-- Apartments section -->
+    <section id="apartments">
+        <h2 class="mb-4">الشقق</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/11/b8/7b/grand-ocean-sokhna-hotel.jpg?w=1200&h=-1&s=1">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/11/b8/7b/grand-ocean-sokhna-hotel.jpg?w=1200&h=-1&s=1" alt="شقة لشخص" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">شقة لشخص</h5>
+                        <p class="card-text">شقة مريحة مصممة للأفراد الباحثين عن الراحة والخصوصية.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 30 دينار</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP.bXgRN8KuxrXHpc-5t3fShgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.bXgRN8KuxrXHpc-5t3fShgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="شقة متزوجين" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">شقة متزوجين</h5>
+                        <p class="card-text">شقة رومانسية مثالية للأزواج مع إطلالات خلابة.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 50 دينار</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://th.bing.com/th/id/OIP.PF_Awjj2_mf5F6tqIr4IMAHaE7?w=288&h=192&c=7&r=0&o=7&pid=1.7&rm=3">
+                        <img src="https://th.bing.com/th/id/OIP.PF_Awjj2_mf5F6tqIr4IMAHaE7?w=288&h=192&c=7&r=0&o=7&pid=1.7&rm=3" alt="جناح خاص" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">جناح خاص</h5>
+                        <p class="card-text">جناح فاخر بتصميم عصري يوفر تجربة إقامة مميزة مع خدمات حصرية.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 120 دينار</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants section -->
+    <section id="restaurants">
+        <h2 class="mb-4">مطاعم ومقاهي</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://www.asia-bars.com/wp-content/uploads/2013/08/merah-putih-bali-22-1140x641.jpg">
+                        <img src="https://www.asia-bars.com/wp-content/uploads/2013/08/merah-putih-bali-22-1140x641.jpg" alt="مطعم فاخر" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">مطعم الذواقة</h5>
+                        <p class="card-text">تجربة طعام فاخرة مع أطباق عالمية وأجواء راقية.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 50 دينار</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://tse3.mm.bing.net/th/id/OIP.tw3wgRuEd70xAuUygmVRqwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.tw3wgRuEd70xAuUygmVRqwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="مقهى مريح" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">مقهى الراحة</h5>
+                        <p class="card-text">مقهى مريح يقدم المشروبات والوجبات الخفيفة في أجواء دافئة.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 15 دينار</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Golf courses section -->
+    <section id="golf_courses">
+        <h2 class="mb-4">ملاعب الجولف</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://th.bing.com/th/id/OIP.pE3StVwZcNaor-f5AMX5KAHaE8?w=291&h=194&c=7&r=0&o=7&pid=1.7&rm=3">
+                        <img src="https://th.bing.com/th/id/OIP.pE3StVwZcNaor-f5AMX5KAHaE8?w=291&h=194&c=7&r=0&o=7&pid=1.7&rm=3" alt="ملعب جولف أساسي" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ملعب جولف أساسي</h5>
+                        <p class="card-text">ملعب مناسب للمبتدئين مع مرافق أساسية.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 50 دينار</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://aweimetta.com/wp-content/uploads/2023/03/golf_bg-min.jpg">
+                        <img src="https://aweimetta.com/wp-content/uploads/2023/03/golf_bg-min.jpg" alt="ملعب جولف متوسط" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ملعب جولف متوسط</h5>
+                        <p class="card-text">ملعب يوفر تجربة لعب متوازنة مع 20 كرة أو مضرب.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 100 دينار</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://tse4.mm.bing.net/th/id/OIP.YUQEwdrSY6O8RhLy-WqT-gHaEe?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.YUQEwdrSY6O8RhLy-WqT-gHaEe?rs=1&pid=ImgDetMain&o=7&rm=3" alt="ملعب جولف فاخر" class="card-img-top img-fluid rounded">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ملعب جولف فاخر</h5>
+                        <p class="card-text">ملعب متميز يشمل 50 كرة، ثلاث مضارب، شنطة، وسيارة جولف.</p>
+                        <a href="#booking" class="btn btn-primary">احجز بـ 350 دينار</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking section -->
+    <section id="booking" class="container">
+        <h2 class="text-center mb-5">نموذج الحجز</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div id="bookingForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="fullName" class="form-label">الاسم الكامل</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">رقم الهاتف</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="serviceType" class="form-label">نوع الخدمة</label>
+                            <select class="form-select" id="serviceType" required>
+                                <option value="">اختر الخدمة...</option>
+                                <option value="apartment_single">شقة لشخص</option>
+                                <option value="apartment_couple">شقة متزوجين</option>
+                                <option value="suite">جناح خاص</option>
+                                <option value="golf_basic">ملعب جولف أساسي</option>
+                                <option value="golf_mid">ملعب جولف متوسط</option>
+                                <option value="golf_premium">ملعب جولف فاخر</option>
+                                <option value="restaurant_luxury">مطعم الذواقة</option>
+                                <option value="restaurant_cafe">مقهى الراحة</option>
+                                <option value="event">حضور فعالية</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="checkIn" class="form-label">تاريخ الوصول</label>
+                            <input type="date" class="form-control" id="checkIn" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="checkOut" class="form-label">تاريخ المغادرة</label>
+                            <input type="date" class="form-control" id="checkOut">
+                        </div>
+                        <div class="col-12">
+                            <label for="notes" class="form-label">ملاحظات إضافية</label>
+                            <textarea class="form-control" id="notes" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">إرسال طلب الحجز</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="container">
+        <h2 class="text-center mb-5">اتصل بنا</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4>معلومات التواصل</h4>
+                    <p><i class="bi bi-telephone"></i> الهاتف: <a href="tel:+962781452714">0781452714</a></p>
+                    <p><i class="bi bi-envelope"></i> البريد: <a href="mailto:aboodkamal647@gmail.com">aboodkamal647@gmail.com</a></p>
+                    <p><i class="bi bi-geo-alt"></i> العنوان: عمان، الأردن</p>
+                    <h4 class="mt-4">ساعات العمل</h4>
+                    <p>الأحد - الخميس: 8 صباحًا - 10 مساءً</p>
+                    <p>الجمعة - السبت: 10 صباحًا - 12 منتصف الليل</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">الاسم</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" class="form-control" id="contactEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">الموضوع</label>
+                        <input type="text" class="form-control" id="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">الرسالة</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://assets.grok.com/users/9f27b98d-ff47-4464-9fdd-829a3aee6978/generated/d27331d1-a0dd-4f7f-afba-de938fcf03fe/image.jpg" alt="شعار هول إن ون" class="logo mb-3">
+                    <p>وجهتك الفاخرة لعالم الجولف والاستجمام في الأردن، نقدم تجربة لا تُنسى مع خدمات متكاملة.</p>
+                    <button class="footer-dark-mode-toggle" id="footerDarkModeToggle">
+                        <i class="bi bi-moon-fill"></i> <span>الوضع الليلي</span>
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#store">المتجر</a></li>
+                        <li><a href="#cart">السلة</a></li>
+                        <li><a href="#apartments">الشقق</a></li>
+                        <li><a href="#golf_courses">ملاعب الجولف</a></li>
+                        <li><a href="#restaurants">المطاعم والمقاهي</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>تواصل معنا</h5>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+962781452714">0781452714</a></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:aboodkamal647@gmail.com">aboodkamal647@gmail.com</a></p>
+                    <div class="social-links mt-3">
+                        <a href="https://facebook.com" target="_blank" class="me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="me-2"><i class="bi bi-twitter"></i></a>
+                    </div>
+                    <div class="newsletter mt-3">
+                        <h5>اشترك في النشرة الإخبارية</h5>
+                        <div>
+                            <input type="email" class="form-control mb-2" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn btn-primary">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">جميع الحقوق محفوظة © 2025 هول إن ون</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize carousel
+        const myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators1'), {
+            interval: 3000,
+            ride: 'carousel'
+        });
+
+        // Dark mode toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('footerDarkModeToggle');
+            const darkModeIcon = darkModeToggle.querySelector('i');
+            const darkModeText = darkModeToggle.querySelector('span');
+            const body = document.body;
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                enableDarkMode();
+            }
+            
+            darkModeToggle.addEventListener('click', function() {
+                if (body.classList.contains('dark-mode')) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+            
+            function enableDarkMode() {
+                body.classList.add('dark-mode');
+                darkModeIcon.classList.remove('bi-moon-fill');
+                darkModeIcon.classList.add('bi-sun-fill');
+                darkModeText.textContent = 'الوضع النهاري';
+                localStorage.setItem('theme', 'dark');
+            }
+            
+            function disableDarkMode() {
+                body.classList.remove('dark-mode');
+                darkModeIcon.classList.remove('bi-sun-fill');
+                darkModeIcon.classList.add('bi-moon-fill');
+                darkModeText.textContent = 'الوضع الليلي';
+                localStorage.setItem('theme', 'light');
+            }
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').classList.add('scrolled');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled');
+                }
+            });
+        });
+
+        // Cart management
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCart() {
+            const cartItems = $('#cart-items');
+            const cartTotal = $('#cart-total');
+            cartItems.empty();
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                cartItems.append(`
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.price} دينار</td>
+                        <td><button class="btn btn-remove" data-index="${index}">إزالة</button></td>
+                    </tr>
+                `);
+                total += parseFloat(item.price);
+            });
+
+            cartTotal.text(total.toFixed(2));
+            saveCart();
+        }
+
+        $('.add-to-cart').click(function() {
+            const name = $(this).data('name');
+            const price = $(this).data('price');
+            cart.push({ name, price });
+            updateCart();
+            alert(`تم إضافة ${name} إلى السلة!`);
+            $('html, body').animate({
+                scrollTop: $('#cart').offset().top - 70
+            }, 800);
+        });
+
+        $(document).on('click', '.btn-remove', function() {
+            const index = $(this).data('index');
+            cart.splice(index, 1);
+            updateCart();
+            alert('تم إزالة المنتج من السلة!');
+        });
+
+        $('#checkout-btn').click(function() {
+            if (cart.length > 0) {
+                alert('تم إرسال طلب الشراء بنجاح! سنتواصل معك قريبًا.');
+                cart = [];
+                updateCart();
+            } else {
+                alert('السلة فارغة! أضف بعض المنتجات أولاً.');
+            }
+        });
+
+        // Booking form validation
+        $('#bookingForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            const name = $('#fullName').val().trim();
+            const phone = $('#phone').val().trim();
+            const service = $('#serviceType').val();
+            const checkIn = $('#checkIn').val();
+            
+            if (name && phone && service && checkIn) {
+                alert('تم استلام طلب الحجز بنجاح! سنتصل بك قريبًا لتأكيد التفاصيل.');
+                this.reset();
+            } else {
+                alert('الرجاء ملء جميع الحقول المطلوبة');
+            }
+        });
+
+        // Contact form validation
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            const name = $('#name').val().trim();
+            const email = $('#contactEmail').val().trim();
+            const subject = $('#subject').val().trim();
+            const message = $('#message').val().trim();
+            
+            if (name && email && subject && message) {
+                alert('تم إرسال رسالتك بنجاح! سنرد عليك في أقرب وقت.');
+                this.reset();
+            } else {
+                alert('الرجاء ملء جميع الحقول المطلوبة');
+            }
+        });
+
+        // Smooth scrolling for nav links
+        $('a.nav-link').click(function(e) {
+            e.preventDefault();
+            const target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 70
+            }, 800);
+        });
+
+        // Image error handling
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = function() {
+                this.src = 'https://via.placeholder.com/150';
+                this.alt = 'صورة غير متوفرة';
+            };
+        });
+
+        // Initialize cart on page load
+        updateCart();
+    </script>
+</body>
+</html>
